@@ -110,3 +110,14 @@
 // }
 
 
+// int main(){
+//   int i,m;
+
+//   printf("Enter the number of which you want multiplication table of: ");
+//   scanf("%d",&m);
+
+//   for (int i = 0; i <= 10; i++)
+//   {
+//     printf("%d * %d = %d \n",m,i,m*i);
+//   }
+// }
