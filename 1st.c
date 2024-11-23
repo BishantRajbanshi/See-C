@@ -66,3 +66,47 @@
 //   }
 //   return 0;
 // }
+
+
+// int main(){
+//   int a,b,c;
+
+//   printf("Enter the value of 3 numbers : ");
+//   scanf("%d%d%d",&a,&b,&c);
+
+//   if (a>b && a>c)
+//   {
+//     printf("%d is the greatest number",a);
+//   } else if (b>c && b>a){
+//     printf("%d is the greatest number",b);
+//   } else{
+//     printf("%d is the greatest number",c);
+//   }
+// }
+
+// int main(){
+//   int i;
+
+//   printf("Even numbers from 1 to 100 are :");
+//   for (int i = 0; i <= 100; i++)
+//   {
+//     if(i % 2 == 0){
+//       printf("%d \n",i);
+//     }
+//   }
+// }
+
+// int main(){
+//   int i,j;
+
+//   for (int i = 0; i <= 5; i++)
+//   {
+//     for (int j = 0; j < i; j++)
+//     {
+//       printf("%d",i);
+//     }
+//     printf("\n");
+//   }
+// }
+
+
