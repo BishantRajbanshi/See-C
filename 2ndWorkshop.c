@@ -68,34 +68,34 @@
 // }
 
 
-// double velocityCalc(double v, double u, double a, double t) {
-//   if (isnan(v)) {
-//       v = u + a * t;
-//       printf("The final velocity is %.2lf\n", v);
-//   } 
-//   else if (isnan(u)) {
-//       u = v - a * t;
-//       printf("The initial velocity is %.2lf\n", u);
-//   } 
-//   else if (isnan(a)) {
-//       a = (v - u) / t;
-//       printf("The acceleration is %.2lf\n", a);
-//   } 
-//   else {
-//       t = (v - u) / a;
-//       printf("The time that has elapsed is %.2lf hours.\n", t);
-//   }
-//   return 0;
-// }
+double velocityCalc(double v, double u, double a, double t) {
+  if (isnan(v)) {
+      v = u + a * t;
+      printf("The final velocity is %.2lf\n", v);
+  } 
+  else if (isnan(u)) {
+      u = v - a * t;
+      printf("The initial velocity is %.2lf\n", u);
+  } 
+  else if (isnan(a)) {
+      a = (v - u) / t;
+      printf("The acceleration is %.2lf\n", a);
+  } 
+  else {
+      t = (v - u) / a;
+      printf("The time that has elapsed is %.2lf hours.\n", t);
+  }
+  return 0;
+}
 
-// int main() {
-//     velocityCalc(NAN, 20, 30, 4); 
-//     velocityCalc(30, NAN, 30, 3);  
-//     velocityCalc(90, 20, NAN, 2);  
-//     velocityCalc(40, 20, 30, NAN); 
+int main() {
+    velocityCalc(NAN, 20, 30, 4); 
+    velocityCalc(30, NAN, 30, 3);  
+    velocityCalc(90, 20, NAN, 2);  
+    velocityCalc(40, 20, 30, NAN); 
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 // #include <stdio.h>
