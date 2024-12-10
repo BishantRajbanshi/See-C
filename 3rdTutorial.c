@@ -123,20 +123,20 @@
 //  }
 
 // qns6
-void swap(int *x, int *y)
-{
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+// void swap(int *x, int *y)
+// {
+//     int temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
 
-int main()
-{
-    int a = 10;
-    int b = 20;
-    printf("before swap: %d %d \n", a, b);
-    swap(&a, &b);
-    printf("after swap: %d %d", a, b);
+// int main()
+// {
+//     int a = 10;
+//     int b = 20;
+//     printf("before swap: %d %d \n", a, b);
+//     swap(&a, &b);
+//     printf("after swap: %d %d", a, b);
 
-    return 0;
-}
+//     return 0;
+// }
