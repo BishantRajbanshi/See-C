@@ -96,24 +96,73 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int arr[] = {5, 10, 15, 20, 25, 30, 35, 40, 50};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int count = 0, sum = 0;
-    printf("Indices of numbers are: \n");
+// int main() {
+//     int arr[] = {5, 10, 15, 20, 25, 30, 35, 40, 50};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     int count = 0, sum = 0;
+//     printf("Indices of numbers are: \n");
 
-    for (int i = 0; i < n; i++) {
-        if (arr[i] % 5 == 0 && arr[i] % 2 != 0 && arr[i] % 3 != 0) {
-            count++;
-            sum += arr[i];
-            printf("Index %d: %d\n", i, arr[i]);
-        }
-    }
+//     for (int i = 0; i < n; i++) {
+//         if (arr[i] % 5 == 0 && arr[i] % 2 != 0 && arr[i] % 3 != 0) {
+//             count++;
+//             sum += arr[i];
+//             printf("Index %d: %d\n", i, arr[i]);
+//         }
+//     }
 
-    printf("\nCount of such numbers: %d\n", count);
-    printf("Sum of such numbers: %d\n", sum);
+//     printf("\nCount of such numbers: %d\n", count);
+//     printf("Sum of such numbers: %d\n", sum);
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+
+// void readArray(int r,int c, int arr[r][c]){
+//     printf("Enter element of the array:");
+//     for(int i=0;i<r;i++){
+//         for(int j=0;j<c;j++){
+//             scanf("%d",&arr[i][j]);
+//         }
+//     }
+// }
+
+// void sumTwoArray(int r,int c,int arr1[r][c],int arr2[r][c],int result[r][c]){
+//     for(int i=0;i<r;i++){
+//         for (int j=0;j<c;j++){
+//             result[i][j]=arr1[i][j]+arr2[i][j];
+//         }
+//     }
+// }
+
+// int main(){
+//     int r1,r2,c1,c2;
+//     printf("Enter the dimension of first array(r,c): ");
+//     scanf("%d %d",&r1,&c1);
+//     printf("Enter the dimension of second array(r,c): ");
+//     scanf("%d %d",&r2,&c2);
+
+//     if(r1!=r2 || c1!=c2){
+//         printf("Arrays with unequal dimension can not be added.");
+//         return 1;
+//     }
+
+//     int arr1[r1][c1], arr2[r2][c2],result[r1][c1];
+//     printf("First 2-D array:\n");
+//     readArray(r1,c1,arr1);
+//     printf("Second 2-D array:\n");
+//     readArray(r2,c2,arr2);
+
+//     sumTwoArray(r1,c1,arr1,arr2,result);
+//     printf("The sum of two 2-D array: ");
+//     for(int i=0;i<r1;i++){
+//         for(int j=0;j<c1;j++){
+//             printf("%d ", result[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
