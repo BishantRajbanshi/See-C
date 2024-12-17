@@ -10,9 +10,9 @@
 //     charPtr = (char *)malloc(sizeof(char));
 //     floatPtr = (float *)malloc(sizeof(float));
 
-//     *intPtr = 42;
+//     *intPtr = 5;
 //     *charPtr = 'A';
-//     *floatPtr = 3.14f;
+//     *floatPtr = 2.1;
 
 //     printf("Int,Char,Float: %d\n%c\n%0.2f", *intPtr, *charPtr, *floatPtr);
 //     return 0;
@@ -78,32 +78,32 @@
 // }
 
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int sum(int *arr, int size) {
-    int sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum += arr[i];
-    }
-    return sum;
-}
+// int sum(int *arr, int size) {
+//     int sum = 0;
+//     for (int i = 0; i < size; i++) {
+//         sum += arr[i];
+//     }
+//     return sum;
+// }
 
-int main() {
-    int n;
+// int main() {
+//     int n;
 
-    printf("Enter the num of elements of array: ");
-    scanf("%d",&n);
+//     printf("Enter the num of elements of array: ");
+//     scanf("%d",&n);
 
-    int *arr = (int*)malloc(n * sizeof(int));
+//     int *arr = (int*)malloc(n * sizeof(int));
     
-    for (int  i = 0; i < n; i++){
-      printf("Enter %d element of array 1: ",i+1);
-      scanf("%d",&arr[i]);
-    }
+//     for (int  i = 0; i < n; i++){
+//       printf("Enter %d element of array 1: ",i+1);
+//       scanf("%d",&arr[i]);
+//     }
     
-    int sumof = 0;
-    sumof = sum(arr, n);
-    printf("The sum is: %d", sumof);
-        return 0;
-}
+//     int sumof = 0;
+//     sumof = sum(arr, n);
+//     printf("The sum is: %d", sumof);
+//         return 0;
+// }
