@@ -50,20 +50,18 @@
 
 // int main() {
 //   int n;
-//   int *arr1;
-//   int *arr2;
-//   int *arr3;
+//   int *arr1,*arr2,*arr3;
 
-  // printf("Enter the num of elements of array: ");
-  // scanf("%d",&n);
+//   printf("Enter the num of elements of array: ");
+//   scanf("%d",&n);
 
 //   arr1 = (int *)malloc(n * sizeof(int));
 //   arr2 = (int *)malloc(n * sizeof(int));
 
-  // for (int  i = 0; i < n; i++){
-  //   printf("Enter %d element of array 1: ",i+1);
-  //   scanf("%d",&arr1[i]);
-  // }
+//   for (int  i = 0; i < n; i++){
+//     printf("Enter %d element of array 1: ",i+1);
+//     scanf("%d",&arr1[i]);
+//   }
 
 //   for (int  i = 0; i < n; i++){
 //     printf("Enter %d element of array 2: ",i+1);
@@ -107,3 +105,5 @@
 //     printf("The sum is: %d", sumof);
 //         return 0;
 // }
+
+
