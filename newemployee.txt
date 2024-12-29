@@ -1,0 +1,10 @@
+Employee 1:
+Name: BIshan
+Age: 45
+Salary: 45454.00
+
+Employee 2:
+Name: HAha
+Age: 74
+Salary: 4545.00
+
