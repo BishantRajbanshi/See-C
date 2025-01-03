@@ -1,27 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sum(int *n) {
-    int sum = 0;
-    for (int i = 0; i < 5; i++) {
-        sum += *n;
-        n++;
-    }
-    printf("\nThe sum is: %d", sum);
-}
+struct Employee {
+    char empName[50];
+    int age;
+    float salary;
+};
+
 int main() {
-    int *parr = (int *)malloc(5 * sizeof(int));
-    if (parr == NULL) {
-        printf("Memory allocation unsuccessful");
-        exit(0);
-    }
+    struct Employee employees[5];
+    FILE *file = fopen("employee.txt", "w");
 
-    for (int i = 0; i < 5; i++) {
-        parr[i] = i + 1;
-        printf("\n%d", parr[i]);
+    for (int i = 0; i < 2; i++) {
+        printf("Enter details for employee %d:\n", i + 1);
+        printf("Name: ");
+        scanf(" %s", employees[i].empName);
+        printf("Age: ");
+        scanf("%d", &employees[i].age);
+        printf("Salary: ");
+        scanf("%f", &employees[i].salary);
+
+        fprintf(file, "Employee %d:\n", i + 1);
+        fprintf(file, "Name: %s\n", employees[i].empName);
+        fprintf(file, "Age: %d\n", employees[i].age);
+        fprintf(file, "Salary: %.2f\n\n", employees[i].salary);
     }
-    sum(parr);
-    free(parr);
-    return 0;
+    fclose(file); 
 }
-

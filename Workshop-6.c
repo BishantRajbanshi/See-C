@@ -28,18 +28,72 @@
 //     fclose(file); 
 // }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main(){
-  int c;
+// int main(){
+//   int c;
 
-  FILE *file1 = fopen("employee.txt", "r");
-  FILE *file2 = fopen("newemployee.txt", "w");
+//   FILE *file1 = fopen("employee.txt", "r");
+//   FILE *file2 = fopen("newemployee.txt", "w");
 
-  while ((c = fgetc(file1))!= EOF)
-  {
-    fputc(c, file2);
-  }
+//   while ((c = fgetc(file1))!= EOF)
+//   {
+//     fputc(c, file2);
+//   }
   
-}
+// }
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// struct Employee {
+//     char name[50];
+//     float salary;
+// };
+
+// int main(){
+//     struct Employee emp;
+//     FILE *file = fopen("newemployee.txt", "a");
+
+//     printf("Enter Employee Name: ");
+//     scanf("%s", &emp.name);
+//     printf("Enter Employee Salary: ");
+//     scanf("%f", &emp.salary);
+
+//     fprintf(file, "%s, %.2f\n", emp.name, emp.salary);
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+
+// int main() {
+//     int number;
+//     char choice[5];
+
+//     FILE *oddFile = fopen("odd.txt", "w");
+//     FILE *evenFile = fopen("even.txt", "w");
+
+//     while (1) {
+//         printf("Enter an integer: ");
+//         scanf("%d", &number);
+
+//         if (number % 2 == 0) {
+//             fprintf(evenFile, "%d\n", number);
+//         } else {
+//             fprintf(oddFile, "%d\n", number);
+//         }
+
+//         printf("Do you want to enter another number? (yes/no): ");
+//         scanf("%s", choice);
+
+//         if (strcmp(choice, "no") == 0) {
+//             break;
+//         }
+//     }
+//     printf("DOne\n");
+//     fclose(oddFile);
+//     fclose(evenFile);
+// }
