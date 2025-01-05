@@ -1,29 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-struct Employee {
-    char empName[50];
-    int age;
-    float salary;
-};
+#include <stdio.h>
+#include <string.h>
 
 int main() {
-    struct Employee employees[5];
-    FILE *file = fopen("employee.txt", "w");
+    int num;
+    char choice[5];
+    FILE *oddFile = fopen("odd.txt", "w");
+    FILE *evenFile = fopen("even.txt", "w");
 
-    for (int i = 0; i < 2; i++) {
-        printf("Enter details for employee %d:\n", i + 1);
-        printf("Name: ");
-        scanf(" %s", employees[i].empName);
-        printf("Age: ");
-        scanf("%d", &employees[i].age);
-        printf("Salary: ");
-        scanf("%f", &employees[i].salary);
+    do {
+        printf("Enter an integer: ");
+        scanf("%d", &num);
+        if (num % 2 == 0) {
+            fprintf(evenFile, "%d\n", num);
+        } else {
+            fprintf(oddFile, "%d\n", num);
+        }
 
-        fprintf(file, "Employee %d:\n", i + 1);
-        fprintf(file, "Name: %s\n", employees[i].empName);
-        fprintf(file, "Age: %d\n", employees[i].age);
-        fprintf(file, "Salary: %.2f\n\n", employees[i].salary);
-    }
-    fclose(file); 
+        printf("Do you want to continue? (yes/no): ");
+        scanf("%s", choice);
+    } while (strcmp(choice, "no") != 0);
+
+    fclose(oddFile);
+    fclose(evenFile);
 }
