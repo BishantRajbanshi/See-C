@@ -1,26 +1,11 @@
-
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    int num;
-    char choice[5];
-    FILE *oddFile = fopen("odd.txt", "w");
-    FILE *evenFile = fopen("even.txt", "w");
-
-    do {
-        printf("Enter an integer: ");
-        scanf("%d", &num);
-        if (num % 2 == 0) {
-            fprintf(evenFile, "%d\n", num);
-        } else {
-            fprintf(oddFile, "%d\n", num);
-        }
-
-        printf("Do you want to continue? (yes/no): ");
-        scanf("%s", choice);
-    } while (strcmp(choice, "no") != 0);
-
-    fclose(oddFile);
-    fclose(evenFile);
+int isPerfect(int num) {
+    int sum = 0;
+    for (int i = 1; i < num; i++) {
+        if (num % i == 0)
+            sum += i;
+    }
+    if (sum == num)
+        return 1;
+    else
+        return 0;
 }
