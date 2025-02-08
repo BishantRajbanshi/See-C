@@ -1,11 +1,28 @@
-int isPerfect(int num) {
-    int sum = 0;
-    for (int i = 1; i < num; i++) {
-        if (num % i == 0)
-            sum += i;
+
+#include <stdio.h>
+
+void printUnique(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        int isUnique = 1; 
+        for (int j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
+                isUnique = 0; 
+                break;
+            }
+        }
+        if (isUnique) {
+            printf("%d ", arr[i]);
+        }
     }
-    if (sum == num)
-        return 1;
-    else
-        return 0;
 }
+
+int main() {
+    int arr[] = {1, 2, 4, 8, 4, 2, 4, 9, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Unique elements: ");
+    printUnique(arr, n);
+
+    return 0;
+}
+
